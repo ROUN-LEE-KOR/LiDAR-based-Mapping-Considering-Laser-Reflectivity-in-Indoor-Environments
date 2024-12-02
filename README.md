@@ -52,6 +52,6 @@
     
 ## Contact
 
-    5473688@kmu.kr
+    rounlee.kor@gmail.com
     
 
