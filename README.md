@@ -4,7 +4,7 @@
 
 
 ## Scan filter
-> * This filter is made to filter out disturbances in LiDAR measurements, like mirrors, glasses in indoor environments.
+> * This filter is made to filter out a reflective object (e.g. mirrors, glasses) in LiDAR measurements.
 > * This software is based on Velodyne VLP-16 LiDAR
 
 
@@ -13,7 +13,8 @@
 
 
 ## Requirements
-> * Based on Ubuntu 20.04 and ROS Noetic
+> * Based on Ubuntu 20.04 and ROS Noetic (ROS1), Ubuntu 22.04 and ROS Humble (ROS2)
+> * 
 > * Require Database for intensities of reflectors of the user's own environments ( In my cases, 15~20 is threshold )
 
 
@@ -34,14 +35,18 @@
 
 
 > * Next, compile the source
-
+    (ROS2)
     cd .. (Move to <user's workspace>)
     colcon build --symlink-install --packages-select scan_filter
     source install/local_setup.bash
+>   (ROS1)
+>   catkin_make
+>   source devel/setup.bash
+
     
     
 > * Then, run the code
-
+    rosrun scan_filter scan_filter_node
     ros2 run scan_filter scan_filter_node
 
 
