@@ -39,10 +39,9 @@
     cd .. (Move to <user's workspace>)
     colcon build --symlink-install --packages-select scan_filter
     source install/local_setup.bash
->   *
->   (ROS1)
->   catkin_make
->   source devel/setup.bash
+ (ROS1)
+  catkin_make
+  source devel/setup.bash
 
     
     
