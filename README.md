@@ -4,16 +4,14 @@
 
 
 ## Scan filter
-> * This filter is made to filter out disturbances in LiDAR measurements, like mirrors, glasses in indoor environments.
-> * This software is based on Velodyne VLP-16 LiDAR
-
+> * This filter is made to filter out outlier from a reflective object (e.g. mirrors, glasses) in LiDAR measurements. 
 
 ## Example
 ![Alt text](docs/example.jpg)
 
 
 ## Requirements
-> * Based on Ubuntu 20.04 and ROS Noetic
+> * Based on Ubuntu 22.04 and ROS Humble
 > * Require Database for intensities of reflectors of the user's own environments ( In my cases, 15~20 is threshold )
 
 
