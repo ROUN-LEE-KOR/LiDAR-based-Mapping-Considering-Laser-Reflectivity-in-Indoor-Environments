@@ -4,14 +4,17 @@
 
 
 ## Scan filter
-> * This filter is made to filter out outlier from a reflective object (e.g. mirrors, glasses) in LiDAR measurements. 
+> * This filter is made to filter out a reflective object (e.g. mirrors, glasses) in LiDAR measurements.
+> * This software is based on Velodyne VLP-16 LiDAR
+
 
 ## Example
 ![Alt text](docs/example.jpg)
 
 
 ## Requirements
-> * Based on Ubuntu 22.04 and ROS Humble
+> * Based on Ubuntu 20.04 and ROS Noetic (ROS1), Ubuntu 22.04 and ROS Humble (ROS2)
+> * 
 > * Require Database for intensities of reflectors of the user's own environments ( In my cases, 15~20 is threshold )
 
 
@@ -21,7 +24,7 @@
 > * First, set(change) subscribe topic name and threshold
     
     cd ~/<user's workspace>/src
-    git clone https://github.com/RounLee1/scan_reflector_filter.git
+    git clone https://github.com/ROUN-LEE-KOR/LiDAR-based-Mapping-Considering-Laser-Reflectivity-in-Indoor-Environments.git
     
     
 >    > *Open .cpp file in src (scan_filter.cpp)
@@ -32,16 +35,19 @@
 
 
 > * Next, compile the source
-
+    (ROS2)
     cd .. (Move to <user's workspace>)
+    colcon build --symlink-install --packages-select scan_filter
+    source install/local_setup.bash
+> * (ROS1)
     catkin_make
     source devel/setup.bash
+
     
     
 > * Then, run the code
-
-    roscore
-    rosrun scan_filter scan_filter
+> * rosrun scan_filter scan_filter_node
+> * ros2 run scan_filter scan_filter_node
 
 
 ## Reference
@@ -50,6 +56,5 @@
     
 ## Contact
 
-    5473688@kmu.kr
+    rounlee.kor@gmail.com
     
-
