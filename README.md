@@ -46,8 +46,8 @@
     
     
 > * Then, run the code
-    rosrun scan_filter scan_filter_node
-    ros2 run scan_filter scan_filter_node
+> * rosrun scan_filter scan_filter_node
+> * ros2 run scan_filter scan_filter_node
 
 
 ## Reference
