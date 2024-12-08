@@ -23,7 +23,7 @@
 > * First, set(change) subscribe topic name and threshold
     
     cd ~/<user's workspace>/src
-    git clone https://github.com/RounLee1/scan_reflector_filter.git
+    git clone https://github.com/ROUN-LEE-KOR/LiDAR-based-Mapping-Considering-Laser-Reflectivity-in-Indoor-Environments.git
     
     
 >    > *Open .cpp file in src (scan_filter.cpp)
@@ -36,14 +36,13 @@
 > * Next, compile the source
 
     cd .. (Move to <user's workspace>)
-    catkin_make
-    source devel/setup.bash
+    colcon build --symlink-install --packages-select scan_filter
+    source install/local_setup.bash
     
     
 > * Then, run the code
 
-    roscore
-    rosrun scan_filter scan_filter
+    ros2 run scan_filter scan_filter_node
 
 
 ## Reference
@@ -52,6 +51,6 @@
     
 ## Contact
 
-    5473688@kmu.kr
+    rounlee.kor@gmail.com
     
 
